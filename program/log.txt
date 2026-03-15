@@ -1,0 +1,67 @@
+=== Tests began ===
+====================
+
+
+TEST 1: Constructor & isEmpty
+  [PASS] Created empty list
+
+TEST 2: operator+=
+  [PASS] Two objects were successfully added
+
+TEST 3: operator[] search
+  [PASS] Search found existing products
+  [PASS] Search correctly returned false for non-existent product
+
+TEST 4: operator%= edit
+  [PASS] Product still exists after edit
+
+TEST 5: operator-=
+  [PASS] Product successfully deleted
+
+TEST 6: operator! clear
+  [PASS] All products cleared
+
+TEST 7: getTotalElementCount
+  [PASS] getTotalElementCount returns correct count (3)
+
+TEST 8: operator==
+  [PASS] operator== correctly identifies equal lists
+
+TEST 9: operator!=
+  [PASS] operator!= correctly identifies different lists
+
+TEST 10: operator<
+  [PASS] operator< correctly identifies smaller list
+
+TEST 11: operator>
+  [PASS] operator> correctly identifies larger list
+
+TEST 12: operator<=
+  [PASS] operator<= works correctly
+
+TEST 13: operator>=
+  [PASS] operator>= works correctly
+
+TEST 14: ProductException (duplicate)
+  [PASS] Caught expected exception: Shop::ProductException: Product: 'Unique' already exists
+
+TEST 15: out_of_range exception (delete nonexistent)
+  [PASS] Caught expected out_of_range: Cannot delete: product 'Ghost' not found
+
+TEST 16: out_of_range exception (edit nonexistent)
+  [PASS] Caught expected out_of_range: Cannot edit: product 'Ghost' not found
+
+TEST 17: Copy constructor
+  [PASS] Copy constructor works
+
+TEST 18: toString()
+  [PASS] toString() returns non-empty string with product names
+
+====================
+=== TESTS COMPLETED ===
+====================
+Total tests: 19
+Passed: 19
+Failed: 0
+Success rate: 100%
+====================
