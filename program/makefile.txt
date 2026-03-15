@@ -1,0 +1,30 @@
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
+
+SOURCES = project.cpp
+HEADERS = products.h
+OBJECTS = products.o
+
+all: demo test
+
+$(OBJECTS): $(SOURCES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $(SOURCES) -o $(OBJECTS)
+
+demo: $(OBJECTS) demo.cpp
+	$(CXX) $(CXXFLAGS) demo.cpp $(OBJECTS) -o demo
+
+run-demo: demo
+	./demo
+
+test: $(OBJECTS) test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp $(OBJECTS) -o test
+
+run-test: test
+	./test
+
+clean:
+	rm -f $(OBJECTS) demo test log.txt
+
+rebuild: clean all
+
+.PHONY: all clean rebuild run-demo run-test
